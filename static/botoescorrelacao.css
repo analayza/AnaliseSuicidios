@@ -1,0 +1,35 @@
+/* Estilo para o contêiner da div */
+div {
+    text-align: center; /* Centraliza o conteúdo */
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Estilo para os títulos */
+h3 {
+    color: #333; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Estilo para os botões */
+input[type="submit"] {
+    background-color: #001a33; /* Azul escuro */
+    color: #fff; /* Texto branco */
+    font-weight: bold;
+    padding: 10px 20px; /* Preenchimento */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-right: 10px; /* Margem direita para separar os botões */
+    cursor: pointer; /* Cursor do mouse */
+}
+
+/* Estilo para os botões ao passar o mouse */
+input[type="submit"]:hover {
+    background-color: #45a049; /* Tom mais escuro de verde */
+}
+
+/* Estilo para adicionar espaço entre os botões */
+.field {
+    display: inline-block; /* Permite alinhamento lado a lado */
+    margin-right: 10px; /* Margem direita para separar os botões */
+}

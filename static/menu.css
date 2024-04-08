@@ -1,0 +1,52 @@
+.Div-menu-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    width: calc(50% - 10px); /* Largura de 50% da tela menos a margem entre as divs */
+    margin-right: 10px;
+}
+
+.Div-menu {
+    display: flex;
+}
+
+.Div-menu-logo {
+    display: flex;
+    align-items: center;
+     padding-right: 50px;
+}
+
+.Menu-button {
+    color: #555;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.Menu-button a {
+    text-decoration: none;
+    color: #555;
+}
+
+.Menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Menu-button:hover a {
+    color: blue;
+}
+
+.Div-menu-button {
+    margin-right: 10px;
+}
+
+.Div-menu-logo img {
+    max-width: 75px;
+    height: auto;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Correlação</title>
+    <link rel="stylesheet" type="text/css" href="../static/menu.css">
+    <link rel="stylesheet" type="text/css" href="../static/pagina.css">
+    <link rel="stylesheet" type="text/css" href="../static/botoescorrelacao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="Div-menu-container">
+        <div class="Div-menu-logo">
+             <img src="{{ url_for('static', filename='logo.png') }}">
+        </div>
+        <div class="Div-menu">
+            <div class="Div-menu-button">
+                <button class="Menu-button">
+                    <a href="/paginainicial">Home</a>
+                </button>
+            </div>
+            <div class="Div-menu-button">
+                <button class="Menu-button">
+                    <a href="/pais">País</a>
+                </button>
+            </div>
+            <div class="Div-menu-button">
+                <button class="Menu-button">
+                    <a href="/estado">Estado</a>
+                </button>
+            </div>
+            <div class="Div-menu-button">
+                <button class="Menu-button">
+                    <a href="/correlacao">Correlacione</a>
+                </button>
+            </div>
+            <div class="Div-menu-button">
+                <button class="Menu-button">
+                    <a href="/prevencao">Prevenção</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+    <div>
+        <h1>Correlação entre o Suicídio e Fatores Socioecônomicos</h1>
+        <p>
+                A correlação é uma medida estatística que descreve a relação entre duas variáveis
+                quantitativas. Ela avalia a direção e a força dessa relação, indicando se as variáveis
+                se movem juntas, em direções opostas ou se não têm relação entre si. A correlação é representada
+                por um valor numérico entre -1 e 1, onde 1 indica uma correlação positiva perfeita, -1 indica uma
+                correlação negativa perfeita e 0 indica ausência de correlação. Uma correlação positiva significa
+                que, à medida que uma variável aumenta, a outra também tende a aumentar, enquanto uma correlação
+                negativa indica que, à medida que uma variável aumenta, a outra tende a diminuir. A análise de
+                correlação é amplamente utilizada em diversas áreas, como economia, ciências sociais, ciências
+                da saúde e pesquisa de mercado, para entender as relações entre variáveis e fazer previsões com
+                base nessas relações.
+            </p>
+    </div>
+    <div class="image-container">
+          {{figmapa|safe}}
+    </div>
+    </div>
+
+        <div>
+            <form action="/salvarcorrelacao" id="stripe-login" method="post">
+
+                <div class="field padding-bottom--24">
+                    <h3>Suicidio X PIB</h3>
+                  <input type="submit" name="submitSP" value="Salvar Correlação">
+                </div>
+
+                <div class="field padding-bottom--24">
+                    <h3>Suicidio X IDH</h3>
+                  <input type="submit" name="submitSI" value="Salvar Correlação">
+
+                </div>
+
+                <div class="field padding-bottom--24">
+                    <h3>Suicidio X IDEB</h3>
+                  <input type="submit" name="submitSID" value="Salvar Correlação">
+                </div>
+              </form>
+        </div>
+</body>
+</html>

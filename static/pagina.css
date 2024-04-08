@@ -1,0 +1,44 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    margin-left: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.image-container img {
+    max-width: 50%; /* Define a largura máxima da imagem como 100% */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formulario {
+    margin-top: 20px;
+}
+
+p {
+   color: #333;
+   text-align: justify;
+   margin-top: 10px;
+   line-height: 1.6;
+}
+
+.image-container-suicidio {
+    margin-left: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
