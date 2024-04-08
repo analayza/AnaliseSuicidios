@@ -44,19 +44,19 @@ def salvarcorrelacao():
     dados = da.lerdados()
     if 'submitSP' in request.form:
         correlacao = dados['suicidios'].corr(dados['pib'])
-        if dao.insert_correlacao(dao.conectardb(), 'pib', correlacao):
+        if dao.insert_correlacao(dao.conectardb_cloud(), 'pib', correlacao):
             return f"Correlação Suicídio x PIB salva com sucesso! {correlacao} "
         else:
             return "Sem Conexão com o banco de dados"
     elif 'submitSI' in request.form:
         correlacao = dados['suicidios'].corr(dados['idh'])
-        if dao.insert_correlacao(dao.conectardb(), 'idh', correlacao):
+        if dao.insert_correlacao(dao.conectardb_cloud(), 'idh', correlacao):
             return f"Correlação Suicídio x IDH salva com sucesso! {correlacao}"
         else:
             return "Sem Conexão com o banco de dados"
     elif 'submitSID' in request.form:
         correlacao = dados['suicidios'].corr(dados['ideb'])
-        if dao.insert_correlacao(dao.conectardb(), 'ideb', correlacao):
+        if dao.insert_correlacao(dao.conectardb_cloud(), 'ideb', correlacao):
             return f"Correlação Suicídio x IDEB salva com sucesso! {correlacao}"
         else:
             return "Sem Conexão com o banco de dados"
@@ -72,7 +72,7 @@ def login():
     email = str(request.form.get('email'))
     senha = str(request.form.get('senha'))
 
-    if dao.login(email, senha, dao.conectardb()):
+    if dao.login(email, senha, dao.conectardb_cloud()):
         return redirect(url_for('exibir_grafico_continente'))
     else:
         return render_template('login.html')
@@ -85,7 +85,7 @@ def redirecionarcadastro():
     elif request.method == 'POST':
         email = str(request.form.get('email'))
         senha = str(request.form.get('senha'))
-        if dao.inserirusuer(email, senha, dao.conectardb()):
+        if dao.inserirusuer(email, senha, dao.conectardb_cloud()):
             return redirect(url_for('exibir_grafico_continente'))
         else:
             texto= 'Email já cadastrado'

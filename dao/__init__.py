@@ -19,6 +19,15 @@ def conectardb():
 
     return con
 
+def conectardb_cloud():
+    con = psycopg2.connect(
+        host='dpg-co6v0t0l6cac73agftc0-a.oregon-postgres.render.com',
+        database='aplicacao',
+        user='aplicacao_user',
+        password='WmBL8RwOijGHiBCIbbIfWdSX4u9464a8'
+    )
+
+    return con
 
 def insert_correlacao(conexao, ind, valor):
     cur = conexao.cursor()
